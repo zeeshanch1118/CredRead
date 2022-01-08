@@ -1,0 +1,13 @@
+
+//
+// modal.scss
+//
+.modal {
+    .modal-header h5 {
+        color: $gray-900;
+    }
+    .modal-content {
+        border-radius: 0;
+        box-shadow: 0 0 15px rgba(0,0,0, 0.35);
+    }
+}

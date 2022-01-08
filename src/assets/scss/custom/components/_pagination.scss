@@ -1,0 +1,64 @@
+// 
+// _pagination.scss
+// 
+
+.inner-custom-pagination {
+    .text-pagination {
+        color: $gray-700;
+    }
+    .pagination {
+        .page-item {
+            margin-right: 3px;
+            margin-left: 3px;
+        }
+        .page-item .page-link {
+            border-color: transparent;
+            text-align: center;
+            font-size: 16px;
+        }
+        .page-item .page-link:hover {
+            border-color: $primary !important;
+            background-color: transparent;
+        }
+        .page-item.active .page-link {
+            background-color: transparent;
+            color: $primary;
+        }
+    }
+    // Pagination rounded (Custom)
+    .pagination-rounded {
+        .page-link {
+            border-radius: 20px !important;
+        }
+    }
+
+    .dropdown-toggle {
+        border-color: $gray-500;
+        color: $secondary !important;
+        background-color: $white !important;
+        width: 80px;
+        text-align: left;
+
+        .caret::before {
+            font-family: 'CredRead' !important;
+            position: relative;
+            margin-left: 7;
+            font-weight: 200;
+            content: "\e900";
+            color: $gray-600;
+            font-size: 12px;
+        }
+    }
+    .dropdown-toggle:hover,
+    .show > .btn-secondary.dropdown-toggle:focus {
+        background-color: $white !important;
+    }
+    .dropdown-menu li {
+        padding: 0;
+    }
+    .dropdown-menu a {
+        color: $dark;
+        padding: 0.35rem 1.5rem;
+        display: block;;
+    }
+}
