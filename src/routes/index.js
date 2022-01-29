@@ -9,8 +9,8 @@ import ForgetPwd from "../pages/Authentication/ForgetPassword";
 
 // CredRead
 import Dashboard from "../pages/Dashboard/index";
-import Candidates from "../pages/Candidates/index";
-import Jobs from "../pages/Jobs/index";
+import Students from "../pages/Students/index";
+import Courses from "../pages/Courses/index";
 import Settings from "../pages/Settings/index";
 
 
@@ -19,8 +19,8 @@ const authProtectedRoutes = [
 
 	//CredRead
 	{ path: "/dashboard", component: Dashboard },
-	{ path: "/candidates", component: Candidates },
-	{ path: "/jobs", component: Jobs },
+	{ path: "/students", component: Students },
+	{ path: "/courses", component: Courses },
 	{ path: "/settings", component: Settings },
 
 	// this route should be at the end of all other routes

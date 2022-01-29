@@ -40,13 +40,13 @@ class ProfileMenu extends Component {
                         <img className="rounded-circle header-profile-user me-2" src={avatar} alt="Header Avatar" />
                         <div className='d-none d-xl-flex flex-column align-items-start me-2'>
                             <div className="text-dark">Jenny Wilson</div>
-                            <div className="text-muted"><small>Local Community Hospital</small></div>
+                            <div className="text-muted"><small>Medical Assistant</small></div>
                         </div>
                         <i className="credread-arrowdown-icon d-none ms-1 d-xl-inline-block" style={{ fontSize: 11 }}></i>
                     </DropdownToggle>
                     <DropdownMenu className="dropdown-menu-end">
                         <DropdownItem href="#">{this.props.t('Account')}</DropdownItem>
-                        <DropdownItem href="#">{this.props.t('Company Profile')}</DropdownItem>
+                        <DropdownItem href="#">{this.props.t('Student Profile')}</DropdownItem>
                         <DropdownItem divider />
                         <DropdownItem className="text-danger" href="/logout">{this.props.t('Log Out')}</DropdownItem>
                     </DropdownMenu>

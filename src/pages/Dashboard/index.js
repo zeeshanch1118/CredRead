@@ -3,17 +3,17 @@ import { Row, Col, Card, CardBody, Dropdown, DropdownMenu, DropdownItem, Dropdow
 
 import ReactApexChart from 'react-apexcharts';
 
-import jobs from "../../assets/images/jobs.svg";
-import deferredJobs from "../../assets/images/deferred-jobs.svg";
-import reviewJob from "../../assets/images/review-job.svg";
-import selectJob from "../../assets/images/select-job.svg";
+import courses from "../../assets/images/courses.svg";
+import deferredCourses from "../../assets/images/deferred-courses.svg";
+import reviewCourse from "../../assets/images/review-course.svg";
+import selectCourse from "../../assets/images/select-course.svg";
 
 class Dashboard extends Component {
     constructor(props) {
         super(props)
         this.state = {
             series: [{
-                name: '# of Candidates',
+                name: '# of Students',
                 type: 'column',
                 data: [1, 1, 5, 8, 15, 11, 8, 5, 3]
             }, {
@@ -37,7 +37,7 @@ class Dashboard extends Component {
                 },
                 yaxis: {
                     title: {
-                        text: '# of Candidates',
+                        text: '# of Students',
                         style: {
                             fontWeight: 200,
                         },
@@ -95,13 +95,14 @@ class Dashboard extends Component {
                                         >
                                             <DropdownToggle color="light w-100 d-flex" caret>
                                                 <i className="credread-briefcase-icon left-icon mt-1"></i>
-                                                <span className="mx-2">Urgent Care Nurse</span>
+                                                <span className="mx-2">Manufacturing Track</span>
                                                 <i className="credread-arrowdown-icon right-icon ms-auto mt-1"></i>
                                             </DropdownToggle>
                                             <DropdownMenu>
-                                                <DropdownItem>Action</DropdownItem>
-                                                <DropdownItem>Another action</DropdownItem>
-                                                <DropdownItem>Something else here</DropdownItem>
+                                                <DropdownItem>Logistics</DropdownItem>
+                                                <DropdownItem>Automotive</DropdownItem>
+                                                <DropdownItem>Medical Assistant</DropdownItem>
+                                                <DropdownItem>Machine Tool Technology</DropdownItem>
                                             </DropdownMenu>
                                         </Dropdown>
                                     </div>
@@ -110,7 +111,7 @@ class Dashboard extends Component {
                                         <Button
                                             color="primary"
                                         >
-                                            <i className="credread-plus-icon"></i> <span className="p-1">Add New Job</span>
+                                            <i className="credread-plus-icon"></i> <span className="p-1">Add New Course</span>
                                         </Button>
                                     </div>
 
@@ -124,7 +125,7 @@ class Dashboard extends Component {
                                     <CardBody className="px-4 py-5">
                                         <Row>
                                             <Col className="col-12 col-md-6">
-                                                <h3>Total Candidates</h3>
+                                                <h3>Total Students</h3>
                                                 <h1 className="display-5 font-weight-bold">64</h1>
                                             </Col>
                                             <Col className="col-12 col-md-6">
@@ -146,16 +147,16 @@ class Dashboard extends Component {
                                         </Row>
                                         <Row>
                                             <Col className="col-12 col-md-6 mt-4 border-top pt-4 pe-5">
-                                                <h3>CredReadiness Candidate Distribution</h3>
+                                                <h3>CredReadiness Student Distribution</h3>
                                                 <h1 className="display-5 font-weight-bold">78-85</h1>
                                                 <p className="m-0 text-muted">
-                                                    The CredReadiness Score for any job role will range from 60 to 100 with a score of 80 or above being defined as Ready. A score of 80 represents the Average Score of individuals in the workforce who are successful in that job role.
+                                                    The CredReadiness Score for any course role will range from 60 to 100 with a score of 80 or above being defined as Ready. A score of 80 represents the Average Score of individuals in the workforce who are successful in that course role.
                                                 </p>
                                                 <Button
                                                     type="button"
                                                     color="white" className="waves-effect waves-light text-primary p-0 mt-3"
                                                 >
-                                                    See Candidates List
+                                                    See Students List
                                                 </Button>
                                             </Col>
                                             <Col className="col-12 col-md-6 pt-5">
@@ -166,20 +167,20 @@ class Dashboard extends Component {
                                         </Row>
                                     </CardBody>
                                 </Card>
-                                <Row>
+                                {/* <Row>
                                     <Col className="col-6 col-md-3">
                                         <Card>
                                             <CardBody className="text-center">
-                                                <img src={jobs} alt="Welcome" className="img-fluid" />
+                                                <img src={courses} alt="Welcome" className="img-fluid" />
                                                 <h1 className="mt-3">18</h1>
-                                                <p className="m-0 text-muted">New Candidates</p>
+                                                <p className="m-0 text-muted">New Students</p>
                                             </CardBody>
                                         </Card>
                                     </Col>
                                     <Col className="col-6 col-md-3">
                                         <Card>
                                             <CardBody className="text-center">
-                                                <img src={reviewJob} alt="Welcome" className="img-fluid" />
+                                                <img src={reviewCourse} alt="Welcome" className="img-fluid" />
                                                 <h1 className="mt-3">30</h1>
                                                 <p className="m-0 text-muted">In Review</p>
                                             </CardBody>
@@ -188,7 +189,7 @@ class Dashboard extends Component {
                                     <Col className="col-6 col-md-3">
                                         <Card>
                                             <CardBody className="text-center">
-                                                <img src={deferredJobs} alt="Welcome" className="img-fluid" />
+                                                <img src={deferredCourses} alt="Welcome" className="img-fluid" />
                                                 <h1 className="mt-3">16</h1>
                                                 <p className="m-0 text-muted">Deferred</p>
                                             </CardBody>
@@ -197,13 +198,13 @@ class Dashboard extends Component {
                                     <Col className="col-6 col-md-3">
                                         <Card>
                                             <CardBody className="text-center">
-                                                <img src={selectJob} alt="Welcome" className="img-fluid" />
+                                                <img src={selectCourse} alt="Welcome" className="img-fluid" />
                                                 <h1 className="mt-3">32 days</h1>
                                                 <p className="m-0 text-muted">Time to Hire</p>
                                             </CardBody>
                                         </Card>
                                     </Col>
-                                </Row>
+                                </Row> */}
                             </Col>
                             <Col className="col-12 col-md-4">
                                 <Card>

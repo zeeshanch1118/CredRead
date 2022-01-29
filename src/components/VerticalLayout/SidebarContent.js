@@ -107,16 +107,16 @@ class SidebarContent extends Component {
                         </li>
 
                         <li>
-                            <Link to="/candidates" className="waves-effect">
+                            <Link to="/students" className="waves-effect">
                                 <i className="credread-users-icon"></i><span className="badge rounded-pill bg-warning text-dark float-end">3</span>
-                                <span className="ms-1">{this.props.t('Candidates')}</span>
+                                <span className="ms-1">{this.props.t('Students')}</span>
                             </Link>
                         </li>
 
                         <li>
-                            <Link to="/jobs" className="waves-effect">
+                            <Link to="/courses" className="waves-effect">
                                 <i className="credread-briefcase-icon"></i>
-                                <span className="ms-1">{this.props.t('Jobs')}</span>
+                                <span className="ms-1">{this.props.t('Courses')}</span>
                             </Link>
                         </li>
 

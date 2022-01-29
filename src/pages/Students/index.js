@@ -27,7 +27,7 @@ import user6 from "../../assets/images/users/avatar-6.jpg"
 import credscore from "../../assets/images/credscore.png"
 
 // Table data
-const candidates = [
+const students = [
 
     {
         id: 1,
@@ -201,17 +201,17 @@ const candidates = [
 
 ];
 
-class Candidates extends Component {
+class Students extends Component {
     constructor(props) {
         super(props)
         this.state = {
             breadcrumbItems: [
-                { title: "Candidates", link: "#" },
+                { title: "Students", link: "#" },
                 { title: "Data Table", link: "#" },
             ],
             page: 1,
             sizePerPage: 10,
-            jobData: candidates,
+            courseData: students,
 
             activeTab: "active",
             activeTab2: "empCriteria",
@@ -237,7 +237,7 @@ class Candidates extends Component {
 
         const columns = [{
             dataField: 'image',
-            text: 'Candidate',
+            text: 'Student',
             formatter: (cell, row, rowIndex, extraData) => (
                 <div className="w-auto">
                     <img src={row.image} alt={row.name} className="rounded-circle avatar-sm" />
@@ -278,7 +278,7 @@ class Candidates extends Component {
         );
         const pageOptions = {
             sizePerPage: 10,
-            totalSize: candidates.length, // replace later with size(customers),
+            totalSize: students.length, // replace later with size(customers),
             custom: true,
             paginationTotalRenderer: paginationCustomTotal,
         }
@@ -293,7 +293,7 @@ class Candidates extends Component {
                         <Row>
                             <Col xs={12}>
                                 <div className="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 className="mb-0">Candidates</h4>
+                                    <h4 className="mb-0">Students</h4>
                                 </div>
                             </Col>
                         </Row>
@@ -307,13 +307,13 @@ class Candidates extends Component {
                                             pagination={paginationFactory(pageOptions)}
                                             keyField='id'
                                             columns={columns}
-                                            data={this.state.jobData}
+                                            data={this.state.courseData}
                                         >
                                             {({ paginationProps, paginationTableProps }) => (
                                                 <ToolkitProvider
                                                     keyField='id'
                                                     columns={columns}
-                                                    data={this.state.jobData}
+                                                    data={this.state.courseData}
                                                 >
                                                     {toolkitProps => (
                                                         <React.Fragment>
@@ -328,7 +328,7 @@ class Candidates extends Component {
                                                                     >
                                                                         <DropdownToggle color="light" caret>
                                                                             <i className="credread-briefcase-icon left-icon"></i>
-                                                                            <span className="mx-2">Job</span>
+                                                                            <span className="mx-2">Course</span>
                                                                             <i className="credread-arrowdown-icon right-icon"></i>
                                                                         </DropdownToggle>
                                                                         <DropdownMenu>
@@ -373,7 +373,7 @@ class Candidates extends Component {
                                                                                 <span className="d-block">All Active <Badge className={this.state.activeTab == "active" ? "badge-soft-primary me-1" : "bg-dark me-1"}>122</Badge></span>
                                                                             </NavLink>
                                                                         </NavItem>
-                                                                        <NavItem>
+                                                                        {/* <NavItem>
                                                                             <NavLink
                                                                                 style={{ cursor: "pointer" }}
                                                                                 className={classnames({
@@ -425,7 +425,7 @@ class Candidates extends Component {
                                                                             >
                                                                                 <span className="d-block">Deferred <Badge className={this.state.activeTab == "deferred" ? "badge-soft-primary me-1" : "bg-dark me-1"}>146</Badge></span>
                                                                             </NavLink>
-                                                                        </NavItem>
+                                                                        </NavItem> */}
                                                                     </Nav>
 
                                                                     <TabContent activeTab={this.state.activeTab}>
@@ -518,7 +518,7 @@ class Candidates extends Component {
                                                                                                             <span className="pe-3 text-center text-muted">
                                                                                                                 <i className="credread-briefcase-icon"></i>
                                                                                                                 <br />
-                                                                                                                <small>Job</small>
+                                                                                                                <small>Course</small>
                                                                                                             </span>
                                                                                                             <span className="border-start ps-3">
                                                                                                                 <h6 className="m-0">Urgent Care Nurse</h6>
@@ -561,7 +561,7 @@ class Candidates extends Component {
                                                                                                                 this.toggleCustomTabs2("empCriteria");
                                                                                                             }}
                                                                                                         >
-                                                                                                            <span className="d-block"><i className="credread-message-icon me-2"></i>Employer Criteria</span>
+                                                                                                            <span className="d-block"><i className="credread-message-icon me-2"></i>Course Criteria</span>
 
                                                                                                         </NavLink>
                                                                                                     </NavItem>
@@ -605,7 +605,7 @@ class Candidates extends Component {
                                                                                                         <Row>
                                                                                                             <Col className="py-4">
                                                                                                                 <div className="d-flex align-items-center mb-2">
-                                                                                                                    <h2 className="me-2 m-0">Your company specific job criteria</h2>
+                                                                                                                    <h2 className="me-2 m-0">Your student specific course criteria</h2>
                                                                                                                     <i href="#" id="question" className="credread-questionmark-icon text-muted"></i>
                                                                                                                     <UncontrolledTooltip
                                                                                                                         placement="right"
@@ -665,7 +665,7 @@ class Candidates extends Component {
                                                                                 </Col>
                                                                             </Row>
                                                                         </TabPane>
-                                                                        <TabPane tabId="new">
+                                                                        {/* <TabPane tabId="new">
                                                                             <Row>
                                                                                 <Col>
                                                                                     new
@@ -692,7 +692,7 @@ class Candidates extends Component {
                                                                                     deferred
                                                                                 </Col>
                                                                             </Row>
-                                                                        </TabPane>
+                                                                        </TabPane> */}
                                                                     </TabContent>
                                                                 </Col>
                                                             </Row>
@@ -714,4 +714,4 @@ class Candidates extends Component {
     }
 }
 
-export default Candidates
+export default Students

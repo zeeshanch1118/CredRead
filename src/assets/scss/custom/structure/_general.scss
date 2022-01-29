@@ -1,4 +1,3 @@
-
 .text-primary {
     color: $primary !important;
 }
@@ -22,4 +21,7 @@
 }
 .bg-primary-light {
     background-color: #DEF6FC !important;
+}
+.bg-primary {
+    background-color: $primary !important;
 }
